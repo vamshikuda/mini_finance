@@ -578,18 +578,65 @@ Bootstrap 5 Dashboard Admin Template
                         </div>
                     </div>
 
-                    <footer class="site-footer">
-                        <div class="container">
-                            <div class="row">
-                                
-                                <div class="col-lg-12 col-12">
-                                    <p class="copyright-text" style="font-size:40px;"> Mini Finance v1.0 — Deployed on 02 09 2025 — By Kodakandla Vamshidhar
-                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
-                                </div>
+                   <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <p class="copyright-text">
+          Mini Finance v1.0 — Deployed on 
+          <span id="deploy-date"></span> — rev: <span id="deploy-rev">REV_PLACEHOLDER</span>
+          — By Kodakandla Vamshidhar
+          - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-                            </div>
-                        </div>
-                    </footer>
+<style>
+  .site-footer {
+    background-color: #f9f9f9; /* light gray background */
+    color: #222222;            /* dark text for ≥ AA contrast */
+    padding: 1.5rem 0;         /* spacing top/bottom */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .site-footer .copyright-text {
+    font-size: 1rem;        /* ~16px */
+    line-height: 1.6;       /* comfortable spacing */
+    letter-spacing: 0.02em; /* subtle readability tweak */
+    margin: 0;
+  }
+
+  .site-footer a {
+    color: #1a73e8;          /* accessible blue (ratio > 4.5:1 on light bg) */
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .site-footer .copyright-text {
+      font-size: 0.9rem;     /* slightly smaller on mobile */
+    }
+  }
+</style>
+
+<script>
+  // Insert today’s date automatically
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+    document.getElementById("deploy-date").textContent = today;
+  });
+</script>
+
                 </main>
 
             </div>
