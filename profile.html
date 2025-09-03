@@ -373,12 +373,11 @@ Bootstrap 5 Dashboard Admin Template
                     </div>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-12">
-        <p class="copyright-text">
-          Mini Finance v1.0 — Deployed on 
-          <span id="deploy-date"></span> — rev: <span id="deploy-rev">REV_PLACEHOLDER</span>
+                <div class="container">
+                <div class="row">
+                <div class="col-lg-12 col-12">
+                <p class="copyright-text">
+          Mini Finance v1.0 — Deployed on <span id="deploy-date"></span>
           — By Kodakandla Vamshidhar
           - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a>
         </p>
@@ -386,6 +385,18 @@ Bootstrap 5 Dashboard Admin Template
     </div>
   </div>
 </footer>
+<script>
+  // Insert today’s date automatically
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+    document.getElementById("deploy-date").textContent = today;
+  });
+</script>
+
 
 <style>
   .site-footer {
@@ -430,7 +441,6 @@ Bootstrap 5 Dashboard Admin Template
     document.getElementById("deploy-date").textContent = today;
   });
 </script>
-
                 </main>
 
             </div>
